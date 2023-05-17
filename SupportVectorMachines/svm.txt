@@ -1,0 +1,19 @@
+SVM is a supervised learning approach.
+The goal of SVM is to find the best hyperplane that separates the data into different classes with the largest margin.
+The margin refers to the distance between the decision boundary (i.e., the hyperplane) and the closest data points
+from each class.
+The best hyperplane is the one that maximizes this margin. SVMs use a technique called maximal margin classification
+to find this hyperplane.
+Important: the margin needs to be MAXIMIZED, there are infinite hyperplanes, the best one is as distant as
+possible from the closest element of the classes, it provides the best classification criterion (very easy to see in
+2 dimensions).
+It is not always possible to find a hyperplane that perfectly separates the data. In this case, SVMs use a soft
+margin approach, which allows for some misclassifications but tries to minimize them.
+
+To solve this optimization problem, SVMs use the kernel trick, which allows the algorithm to operate in a
+high-dimensional space without actually computing the coordinates of the data in that space. The kernel function
+calculates the similarity between two points in the high-dimensional space. The most commonly used kernel functions
+are the linear kernel, polynomial kernel, and radial basis function (RBF) kernel.
+The distance is not computed using mathematical formulas like Euclidean distance and so on, but using a kernel function
+that replaces the distance with a similarity measure.
+
