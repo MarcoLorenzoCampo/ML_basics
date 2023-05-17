@@ -39,8 +39,9 @@ y = list(cls)
 # Splitting the attributes and target at random, keeping 90% to train, 10% to test proportions
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.1)
 
-# Create classifier, K=5, change the parameter based on the output accuracy
-model = KNeighborsClassifier(9)
+# Create classifier, K=9, change the parameter based on the output accuracy
+K = 9
+model = KNeighborsClassifier(K)
 model.fit(x_train, y_train)
 
 acc = model.score(x_test, y_test)
@@ -54,5 +55,20 @@ for x in range(len(x_test)):
     print('Predicted data: ', names[predicted[x]], '| Data: ', x_test[x], '| Actual: ', y_test[x])
 
     # Print the distance to all the other points
-    n = model.kneighbors([x_test[x]], 9, True)
+    n = model.kneighbors([x_test[x]], K, True)
     print('N: ', n)
+
+"""
+Let's take a random output for example:
+
+Predicted data:  good | Data:  (1, 1, 3, 2, 0, 1) | Actual:  2
+N:  (
+    array([[1, 1, 1, 1, 1, 1, 1, 1, 1.41421356]]), 
+    array([[ 315,  750, 1094, 1205,  310,  491,  605, 1335,  349]],
+      dtype=int64)
+    )
+
+Our random element of the test set has distance 1 from K=1-8 but has distance
+1.41421356 for the the 9th closest element.
+The second array gives us the index number of the 9 nearest neighbors
+"""
