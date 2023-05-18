@@ -1,0 +1,26 @@
+K-means clustering is an unsupervised machine learning algorithm used for clustering data points into a pre-defined
+number of groups (k). The algorithm works by partitioning the data points into k clusters based on their similarity.
+The value of k is pre-defined by the user, and the algorithm tries to minimize the sum of the squared distances between
+the data points and their assigned cluster centers.
+
+1. Initialization: The algorithm randomly selects k data points from the dataset as the initial cluster centroids.
+These initial centers can be chosen in various ways, such as randomly, using a heuristic, or by applying some other
+clustering algorithm.
+
+2. Assignment: Each data point is assigned to the cluster with the nearest cluster center based on the Euclidean
+distance between the data point and the cluster center. This step is sometimes called the "assignment step".
+
+3. Update: After all data points are assigned to their nearest cluster center, the algorithm calculates the mean of
+the data points in each cluster and updates the cluster center accordingly. This step is sometimes called the
+"update step".
+
+4. Repeat: Steps 2 and 3 are repeated until convergence or until a pre-defined number of iterations is reached.
+Convergence is typically achieved when the assignment of data points to clusters no longer changes or changes very
+little between iterations.
+
+The final result of the K-means algorithm is a set of k cluster centers and the assignment of each data point to a
+cluster. The algorithm aims to minimize the sum of the squared distances between the data points and their assigned
+cluster centers, which is known as the "within-cluster sum of squares" or "inertia".
+
+The problem is performance, each iteration explores the whole dataset for k times. And each element of the dataset needs
+to be explored for each possible feature.
