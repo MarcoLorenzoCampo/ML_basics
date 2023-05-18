@@ -13,7 +13,7 @@ Welcome to the Machine Learning Basics project! This project aims to provide a c
 ## Introduction
 
 In this section, you will learn the basic concepts of machine learning and its applications in various domains. We will cover the key terminologies, the types of machine learning algorithms, and the overall workflow of a typical machine learning project.
-
+ 
 ## Clustering
 
 Clustering is an unsupervised learning technique used to group similar data points together. In this section, we will explore popular clustering algorithms such as K-means, DBSCAN, and hierarchical clustering. You will understand how these algorithms work and how to evaluate the clustering results.
