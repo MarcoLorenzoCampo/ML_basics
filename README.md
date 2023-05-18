@@ -29,5 +29,3 @@ Linear regression is a supervised learning algorithm used for predicting continu
 ## Neural Networks
 
 Neural networks are a powerful class of machine learning algorithms inspired by the structure and function of the human brain. In this section, we will introduce the basics of neural networks, including the building blocks such as neurons, activation functions, and layers. You will also learn how to design and train neural networks using popular frameworks like TensorFlow or PyTorch.
-
----
