@@ -40,4 +40,4 @@ def bench_k_means(estimator, name, data):
 clf = KMeans(n_clusters=k, init='k-means++', n_init=10)
 
 # Measure accuracy
-bench_k_means(clf, "classifier 1", data)
+bench_k_means(clf, "Classifier 1:  ", data)
