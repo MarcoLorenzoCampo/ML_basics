@@ -19,7 +19,7 @@ k = len(np.unique(y))
 samples, features = data.shape
 
 
-# Function to score the model from sklearn library
+# Function to score the model from sklearn library, different metrics
 def bench_k_means(estimator, name, data):
     estimator.fit(data)
     print('%-9s\t%i\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f'
